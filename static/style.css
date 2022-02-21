@@ -1,0 +1,18 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: bisque;
+    padding: 5px 100px;
+}
+
+.fullpost {
+    background-color:lightyellow;
+    border: 3px solid rgb(218, 138, 48);
+    border-radius: 8px;
+    margin: 5px 0px;
+    padding: 0px 10px;
+}
+
+.foo {
+    color: green;
+}
