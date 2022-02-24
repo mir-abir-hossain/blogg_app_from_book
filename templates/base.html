@@ -14,7 +14,23 @@
         {% endblock title %}</title>
 </head>
 <body>
-    <div class="foo"><h2>Django Blog</h2></div>
+    {% if user.is_authenticated %}
+        <div class="pre-nav">
+            <h4>Hello {{user.title}}, welcome to blog!</h4>
+            <a href="{% url 'logout' %}">Log out</a>
+        </div>
+    {% else %}
+        <div class="pre-nav">
+            <h4>Hello {{user.title}}, you are not logged in,please log in</h4>
+            <a href="{% url 'login' %}">Log In</a>
+        </div>
+    {% endif %}
+    
+    <div class="nav">
+        <div class="nav-right"><a href="{% url 'home' %}"><h2>Django Blog</h2></a></div>
+        <div class="nav-left"><a href="{% url 'new_post' %}"><h2>+ Add New Post</h2></a></div>
+    </div>
+
     {% block content %}
         
     {% endblock content %}

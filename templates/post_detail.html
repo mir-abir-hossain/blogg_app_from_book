@@ -8,4 +8,8 @@
         <p>{{ post.author }}</p>
         <p>{{ post.body }}</p>
     </div>
+
+    <a href="{% url 'post_edit' post.pk %}">+ Edit this post</a>
+    <a href="{% url 'post_delete' post.pk %}">+ Delete this post</a>
+
 {% endblock content %}
